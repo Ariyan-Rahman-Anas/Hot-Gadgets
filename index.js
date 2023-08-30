@@ -31,7 +31,7 @@ const displayPhone = (phones, isShowAll) =>{
                 <h1 class="text-3xl font-bold py-4 " >${item.phone_name} </h1>
                 <p class="text-xs pb-2">There are many variations of passages of available, but the majority have suffered</p>
                 <strong>$999</strong>
-                <button onclick="handleShowDetails('${item.slug}')" class="bg-blue-600 text-white px-6 py-2 font-semibold rounded-md w-fit block mx-auto my-5 ">Show Details</button>
+                <button onclick="handleShowDetails('${item.slug}')" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 font-semibold rounded-md w-fit block mx-auto my-5 ">Show Details</button>
             </div>
         `;
         displayArea.appendChild(createCard)
