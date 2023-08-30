@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Gadgets</title>
+    <link rel="shortcut icon" href="./img/favLog.png" type="image/x-icon">
+
+    <!-- ============--- cdn of tailwind ---============ -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- ============--- cdn of font awesome ---============ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- ============--- header section ---============ -->
+    <header class="bg-[#baf1ff]">
+        <nav class="flex flex-col md:flex-row gap-y-4 items-center justify-between md:px-24 py-4 ">
+            <div class="logo">
+                <h1 class="font-bold text-xl">HotGadgets</h1>
+            </div>
+            <div class="sign-btn">
+                <a href="https://www.facebook.com/ariyanrahmananas69/" target="_blank" class="bg-blue-600 text-white px-6 py-2 font-bold rounded-md ">Sign Up</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+    <!-- ============--- banner section ---============ -->
+        <section id="banner"  class=" bg-gradient-to-b from-[#baf1ff] to-white pt-12">
+            <h1 class="text-5xl font-bold text-center px-2">Apple Iphone 13 Pro Max</h1>
+            <p class="text-sm text-center text-gray-600 mt-5 px-2 md:px-0 ">There are many variations of passages of Lorem Ipsum available, but the majority<br>have suffered alteration in some form, by injected humou.</p>
+            <a href="https://www.facebook.com/ariyanrahmananas69/" target="_blank" class="bg-blue-600 text-white px-6 py-2 font-bold rounded-md w-fit block mx-auto my-5 ">Buy Now</a>
+            <div class="img-sec md:w-[60%] py-5 mx-auto flex items-end justify-center gap-4 ">
+                <img src="./img/i-13.1.png" class="w-[16%]" alt="">
+                <img src="./img/i-13.2.png" class="w-[22%]" alt="">
+                <img src="./img/i-13.3.png" class="w-[16%]" alt="">
+            </div>
+        </section>
+
+    <!-- ============--- search are section ---============ -->
+        <section id="searching-phone" class="mt-20">
+            <h2 class="font-semibold text-4xl text-center">Search your Gadgets</h2>
+            <p class="text-center text-sm pt-2 font-semibold text-gray-400 uppercase">Apple-Huawei-Samsung-Oppo</p>
+            <div class="field-btn flex items-center justify-center mx-auto w-[90%] md:w-[50%]" >
+                <div class="input-field flex-1 flex items-center justify-start gap-1 px-4 rounded-l-md bg-gray-200">
+                    <button>
+                        <i class="fas fa-regular fa-magnifying-glass"></i>
+                    </button>
+                    <input type="text" placeholder="Search your phone" id="search-field" class="py-4 px-2 focus:outline-none bg-gray-200 w-[100%]">
+                </div>
+                <button onclick="searchBtn()" id="search-btn" class="bg-blue-600 text-white px-6 py-4 font-bold rounded-r-md w-fit block mx-auto my-5 ">Search</button>
+            </div>
+        </section>
+
+    <!-- ============--- dynamic card section ---============ -->
+        <section id="dynamic-card-area" class="my-10">
+            <div id="loader" class="loader text-center hidden">
+                <span class="loading loading-dots loading-lg"></span>
+            </div>
+            <div class="card-area grid place-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-center w-[100%] md:w-[80%] mx-auto px-2 " id="phone-card">
+                <!-- this div's code available in Js file -->
+            </div>
+            <button onclick="handleShowAll()" id="show-all-btn" class="bg-blue-600 text-white px-6 py-2 font-bold rounded-md w-fit mx-auto my-5 hidden ">Show All</button>
+        </section>
+
+    <!-- ============--- cards modal section ---============ -->
+        <div id="details_modal">
+            <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+            <form method="dialog" class="modal-box">
+                <div id="modal-details">
+                    <!-- this div's code available in JS file -->
+                </div>
+                <div class="modal-action">
+                <!-- closing button of modal -->
+                <button class=" py-2 px-4 text-white font-semibold bg-blue-600 rounded-md">Close</button>
+                </div>
+            </form>
+            </dialog>
+        </div>
+    </main>
+
+    <!-- ============--- footer section ---============ -->
+    <footer class="bg-gradient-to-b from-white to-[#b1f1ff]">
+        <div class="all-content border- border-black w-[100%] md:w-[90%] mx-auto px-2 ">
+            <div class="footer-up flex flex-col md:flex-row items-start md:items-center justify-between">
+                <div class="up-left">
+                    <h1 class="font-semibold text-3xl italic">Hot Gadgets</h1>
+                    <p class="text-sm py-1 text-gray-500">You can definitely work.</p>
+                </div>
+                <div class="up-right flex items-center justify-center gap-x-5">
+                    <a href="https://www.facebook.com/ariyanrahmananas69/" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mr.ariyan.rahman.anas/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="" class="bg-blue-600 text-white px-4 py-2 font-bold rounded-md my-5 ">Join Premium</a>
+                </div>
+            </div>
+            <div class="footer-down flex flex-col md:flex-row items-start justify-between gap-y-4 pt-10">
+                <div class="text-sm font-semibold">
+                    <span class="footer-title block italic">Product</span>
+                    <a href="" class="link link-hover block">Browse jobs</a>
+                    <a href="" class="link link-hover block">Startup jobs</a>
+                    <a href="" class="link link-hover block">Remote jobs</a>
+                    <a href="" class="link link-hover block">Company jobs</a>
+                </div>
+                <div class="text-sm font-semibold">
+                    <span class="footer-title block italic">Popular</span>
+                    <a href="" class="link link-hover block">UI-UX Design</a>
+                    <a href="" class="link link-hover block">Product Design</a>
+                    <a href="" class="link link-hover block">Back-End Developer</a>
+                    <a href="" class="link link-hover block">Front-End Developer</a>
+                </div>
+                <div class="text-sm font-semibold">
+                    <span class="footer-title block italic">Resource</span>
+                    <a href="" class="link link-hover block">Faq</a>
+                    <a href="" class="link link-hover block">Support</a>
+                    <a href="" class="link link-hover block">Privacy Policy</a>
+                    <a href="" class="link link-hover block">Terms of Service</a>
+                </div>
+                <div class="text-sm font-semibold">
+                    <span class="footer-title block italic">Company</span>
+                    <a href="" class="link link-hover block">Careers</a>
+                    <a href="" class="link link-hover block">About Us</a>
+                    <a href="" class="link link-hover block">Contact Us</a>
+                    <a href="" class="link link-hover block">Career Tips</a>
+                </div>
+            </div>
+        </div>
+        <p class="px-1 text-center text-sm pt-8 pb-1 text-gray-500 font-semibold">&copy;Copy rights 2023|| All right reserved by <sup>&copy;</sup><a href="https://www.facebook.com/ariyanrahmananas69/" target="_blank">Ariyan Rahman Anas</a></p>
+    </footer>
+
+    <!-- ============--- JS file link ---============ -->
+    <script src="index.js"></script>
+</body>
+</html>
